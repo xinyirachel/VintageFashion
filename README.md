@@ -32,7 +32,7 @@ Users can create a list with their product information and edit/delete it. They 
 
 ### Sitemap
 
-![Home](/docs/sitemap.png)
+![Sitemap](/docs/sitemap.jpg)
 
 ### Screenshots
 
