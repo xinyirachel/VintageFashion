@@ -134,16 +134,19 @@ Active storage helped with file implementing.  Developer can send file attachmen
 #### Device
 Device is a Gem. This package bing the app a user authentication and authorization system.
 
-
 ## Detail any third party services that your app will use
 In future development. The app may use some thrid party API.
 
 ## Describe your projects models in terms of the relationships (active record associations) they have with each other
-
+In Active Record, item been created has persistent data and action to that data.
+![schema1](/docs/s.png)
 
 ## Discuss the database relations to be implemented in your application
+Users and categories and listings have id bigint data types, because primary key must be unque and never repeats. Categories has many listings and category id is a foreign key in listings table, another foreign key for listing table is user id. They depend on each other. Databases use active record assosciations to create reationships between the different models. 
 
 ## Provide your database schema design
+![schema1](/docs/s.png)
+![schema2](/docs/s2.png)
 
 ## Describe the way tasks are allocated and tracked in your project
-
+![trello](/docs/trello.png)
