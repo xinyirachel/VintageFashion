@@ -123,8 +123,8 @@ Acceptance criteria:
 ![showpagelogedin](/docs/5.png)
 ![showpagenotlogin](/docs/6.png)
 
-
 ## An ERD for your app
+![erd](/docs/ERD.jpg)
 
 ## Explain the different high-level components (abstractions) in your app
 #### Active record
