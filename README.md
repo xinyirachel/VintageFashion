@@ -26,12 +26,15 @@ The target audience is Australian people who want to sell their old clothese or 
 User can create a list with their product information and edit/delete it. They make change to other people's post. They can enter their contact details and product describtion (information like condition or price can be entered too).
 
 Home page:
+
 ![Home](/docs/homepage.png)
 
 Listings:
+
 ![Listings](/docs/listings.png)
 
 Create listing:
+
 ![Create a list](/docs/createalist.png)
 
 The following tech stack were used:
