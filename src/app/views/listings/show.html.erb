@@ -1,0 +1,46 @@
+<section class='container d-flex flex-column flex-md-row px-2 my-2 my-md-5'>
+
+    <div class='sidebar col-lg-4 p-0 mx-2 d-md-block'> 
+         <h1 class='mb-sm-2 mb-md-5'><%=@listing.title%></h1>
+         <h4 class='text-muted'>Condition: <%=format_condition(@listing.condition)%></h4>
+         <h5 class='text-muted'>Price: <%=format_price(@listing.price)%></h4>
+
+        <div class='container'>
+            <%if current_user && current_user.id == @listing.user_id%>
+                <div class='d-flex justify-content-equally'>
+                    <%= link_to "Update", edit_listing_path(@listing.id), class: "btn btn-warning mr-2" %>
+                    <%= link_to "Delete", @listing, method: :delete, data: {confirm: "Delete this item?"}, class: "btn btn-warning mr-2" %>
+                </div>
+            <%end%>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class='content col-12 col-md-7 col-lg-8 p-0 pr-md-3'>
+        <div class='col-12 p-0 main-preview mb-4'>
+        
+            <%if @listing.picture.attached?%>
+                <%=image_tag @listing.picture, alt: @listing.title, class:"thumbnail card-img top"%>
+            <%else%>
+                <%=image_tag "noimages.jpg", alt: "no images", class:"thumbnail card-img top"%>
+            <%end%>
+      
+            
+      
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+</section>

@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1 class="display-4">Vintage Fashion!</h1>
+  
+  
+  <div>
+      <%if user_signed_in?%>  
+
+     <span>Hello,<%=current_user.email%></span> 
+
+     <%else%>
+
+     <span>Hello Visitor</span> 
+
+     <%end%>
+  </div>
+  
+  <%=image_tag "theme.jpg", alt: "themepic", class:"thumbnail card-img top"%>
+</div>
+
