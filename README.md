@@ -25,7 +25,7 @@ The target audience is Australian people who want to sell their old clothese or 
 
 User can create a list with their product information and edit/delete it. They make change to other people's post. They can enter their contact details and product describtion (information like condition or price can be entered too).
 
-![home page](docs/home_page.png)
+![home page](./docs/home_page.png)
 
 The following tech stack were used:
 - HTML
