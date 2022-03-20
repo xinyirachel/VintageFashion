@@ -16301,3 +16301,308 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
 
 
+Started GET "/" for ::1 at 2022-03-20 16:58:46 +1100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1395.9ms | Allocations: 45303)
+Started GET "/" for ::1 at 2022-03-20 16:58:49 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 508)
+  Rendered layout layouts/application.html.erb (Duration: 2681.5ms | Allocations: 93617)
+Completed 200 OK in 2690ms (Views: 2684.2ms | ActiveRecord: 0.0ms | Allocations: 97352)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 22447)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 23022)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-03-20 16:58:52 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 684)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 6008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 13945)
+Completed 200 OK in 64ms (Views: 20.5ms | ActiveRecord: 36.7ms | Allocations: 21743)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-03-20 16:59:09 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 275ms (ActiveRecord: 5.2ms | Allocations: 9034)
+
+
+Started GET "/" for ::1 at 2022-03-20 16:59:09 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:6
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 9470)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 2.3ms | Allocations: 10011)
+
+
+Started GET "/listings" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ListingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (44.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (42.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (22.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:9
+  Rendered listings/index.html.erb within layouts/application (Duration: 182.5ms | Allocations: 44879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:14
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 192.9ms | Allocations: 53488)
+Completed 200 OK in 201ms (Views: 64.2ms | ActiveRecord: 130.5ms | Allocations: 57348)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--44f60d0aeec4a2b0dcf36cacc73ae40d3d3472c8/dress2.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0eb109d15c284f39bf2254343f245d5808936b42/blouse.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3e24bab3c1a2d8245e27c7b9ea494aa988c52b88/dress1.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--af812a8f8be504ed76b7395952b50c0699814b11/jeans.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--44f60d0aeec4a2b0dcf36cacc73ae40d3d3472c8", "filename"=>"dress2"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b9c687e2268c071cb069d850e65d807400f8465b/sweater.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0eb109d15c284f39bf2254343f245d5808936b42", "filename"=>"blouse"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--af812a8f8be504ed76b7395952b50c0699814b11", "filename"=>"jeans"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3e24bab3c1a2d8245e27c7b9ea494aa988c52b88", "filename"=>"dress1"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b9c687e2268c071cb069d850e65d807400f8465b", "filename"=>"sweater"}
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (1.9ms) [0m[34mGenerated URL for file at key: 46ar560591i4bxxt6nsi0r7njykg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORFpoY2pVMk1EVTVNV2swWW5oNGREWnVjMmt3Y2pkdWFubHJad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNaTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4yOTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--d14ad15ced1f5eff180bb809ad10c2ee33d72510/dress2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORFpoY2pVMk1EVTVNV2swWW5oNGREWnVjMmt3Y2pkdWFubHJad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNaTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4yOTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--d14ad15ced1f5eff180bb809ad10c2ee33d72510/dress2.jpg
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 6369)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d5676f0ee4141488a3c99991cf17a8463dcb6d0/tshirt.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d5676f0ee4141488a3c99991cf17a8463dcb6d0", "filename"=>"tshirt"}
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 9wdgxpue56170c8ffdcz1a87omx4 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPWGRrWjNod2RXVTFOakUzTUdNNFptWmtZM294WVRnM2IyMTROQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SemFHbHlkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozUnphR2x5ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--a24973ae8d4f2c24c992470aa4d9e412381f85cf/tshirt.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPWGRrWjNod2RXVTFOakUzTUdNNFptWmtZM294WVRnM2IyMTROQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SemFHbHlkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozUnphR2x5ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--a24973ae8d4f2c24c992470aa4d9e412381f85cf/tshirt.jpg
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 10696)
+
+
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: h16pn4ug2tap0vl07i72fr5zxrh5 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhREUyY0c0MGRXY3lkR0Z3TUhac01EZHBOekptY2pWNmVISm9OUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Kc2IzVnpaUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySnNiM1Z6WlM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--e4d4c81d6c4bb6fa8e7f435bfd395b181a360584/blouse.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhREUyY0c0MGRXY3lkR0Z3TUhac01EZHBOekptY2pWNmVISm9OUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Kc2IzVnpaUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySnNiM1Z6WlM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--e4d4c81d6c4bb6fa8e7f435bfd395b181a360584/blouse.jpg
+Completed 302 Found in 38ms (ActiveRecord: 21.5ms | Allocations: 25638)
+
+
+  [1m[36mActiveStorage::Blob Load (4.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: aejp1tnyg8yuha6oheuiir4n1ksi (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV1ZxY0RGMGJubG5PSGwxYUdFMmIyaGxkV2xwY2pSdU1XdHphUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1wbFlXNXpMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFtVmhibk11YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTAzLTIwVDA2OjA0OjExLjMzMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fd3b961c6d5e9f75f6282834b57691eab3849cc/jeans.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV1ZxY0RGMGJubG5PSGwxYUdFMmIyaGxkV2xwY2pSdU1XdHphUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1wbFlXNXpMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFtVmhibk11YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTAzLTIwVDA2OjA0OjExLjMzMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fd3b961c6d5e9f75f6282834b57691eab3849cc/jeans.jpg
+Completed 302 Found in 39ms (ActiveRecord: 18.5ms | Allocations: 26314)
+
+
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: nscc29sv3m2ca351788evbbbenym (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibk5qWXpJNWMzWXpiVEpqWVRNMU1UYzRPR1YyWW1KaVpXNTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f1d806b10c806f32dcd916197faffb02b0a682a4/dress1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibk5qWXpJNWMzWXpiVEpqWVRNMU1UYzRPR1YyWW1KaVpXNTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f1d806b10c806f32dcd916197faffb02b0a682a4/dress1.jpg
+Completed 302 Found in 42ms (ActiveRecord: 23.9ms | Allocations: 27389)
+
+
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: qwb2bwaupwz86ds9c0d79k8nvlmx (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjWGRpTW1KM1lYVndkM280Tm1Sek9XTXdaRGM1YXpodWRteHRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OM1pXRjBaWEl1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHpkMlZoZEdWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--b45f49d20794151add2ba78da1f006729d61b128/sweater.jpg)[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c675e75f0e479894ae9ace097060285a8967244/suit.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjWGRpTW1KM1lYVndkM280Tm1Sek9XTXdaRGM1YXpodWRteHRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OM1pXRjBaWEl1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHpkMlZoZEdWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--b45f49d20794151add2ba78da1f006729d61b128/sweater.jpg
+Completed 302 Found in 45ms (ActiveRecord: 23.4ms | Allocations: 29780)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c675e75f0e479894ae9ace097060285a8967244", "filename"=>"suit"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: z8uj8oob7mxnpwkq37i8aszhtdjs (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlamgxYWpodmIySTNiWGh1Y0hkcmNUTTNhVGhoYzNwb2RHUnFjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OMWFYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemRXbDBMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuMzQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ac9eb0e61cf506a4e38da884f61dbe104011ab4c/suit.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlamgxYWpodmIySTNiWGh1Y0hkcmNUTTNhVGhoYzNwb2RHUnFjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OMWFYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemRXbDBMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuMzQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ac9eb0e61cf506a4e38da884f61dbe104011ab4c/suit.jpg
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 4253)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORFpoY2pVMk1EVTVNV2swWW5oNGREWnVjMmt3Y2pkdWFubHJad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNaTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4yOTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--d14ad15ced1f5eff180bb809ad10c2ee33d72510/dress2.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPWGRrWjNod2RXVTFOakUzTUdNNFptWmtZM294WVRnM2IyMTROQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SemFHbHlkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozUnphR2x5ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--a24973ae8d4f2c24c992470aa4d9e412381f85cf/tshirt.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"dress2"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV1ZxY0RGMGJubG5PSGwxYUdFMmIyaGxkV2xwY2pSdU1XdHphUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1wbFlXNXpMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFtVmhibk11YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTAzLTIwVDA2OjA0OjExLjMzMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fd3b961c6d5e9f75f6282834b57691eab3849cc/jeans.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1739)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"tshirt"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 1160)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhREUyY0c0MGRXY3lkR0Z3TUhac01EZHBOekptY2pWNmVISm9OUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Kc2IzVnpaUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySnNiM1Z6WlM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--e4d4c81d6c4bb6fa8e7f435bfd395b181a360584/blouse.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jeans"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibk5qWXpJNWMzWXpiVEpqWVRNMU1UYzRPR1YyWW1KaVpXNTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f1d806b10c806f32dcd916197faffb02b0a682a4/dress1.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 594)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"blouse"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"dress1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 726)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjWGRpTW1KM1lYVndkM280Tm1Sek9XTXdaRGM1YXpodWRteHRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OM1pXRjBaWEl1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHpkMlZoZEdWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--b45f49d20794151add2ba78da1f006729d61b128/sweater.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sweater"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlamgxYWpodmIySTNiWGh1Y0hkcmNUTTNhVGhoYzNwb2RHUnFjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OMWFYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemRXbDBMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuMzQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ac9eb0e61cf506a4e38da884f61dbe104011ab4c/suit.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 744)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"suit"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4e1e693e22d4381f0a5d8be29a3ab10d32247adb/cardigan.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4e1e693e22d4381f0a5d8be29a3ab10d32247adb", "filename"=>"cardigan"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: gnhvnxw70ef6hyxju41nac756onf (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMjVvZG01NGR6Y3daV1kyYUhsNGFuVTBNVzVoWXpjMU5tOXVaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OaGNtUnBaMkZ1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMkZ5WkdsbllXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuNTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--56b7fae4547b5851fb3b765147800cd14f6a6995/cardigan.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMjVvZG01NGR6Y3daV1kyYUhsNGFuVTBNVzVoWXpjMU5tOXVaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OaGNtUnBaMkZ1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMkZ5WkdsbllXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuNTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--56b7fae4547b5851fb3b765147800cd14f6a6995/cardigan.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 1840)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMjVvZG01NGR6Y3daV1kyYUhsNGFuVTBNVzVoWXpjMU5tOXVaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OaGNtUnBaMkZ1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMkZ5WkdsbllXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuNTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--56b7fae4547b5851fb3b765147800cd14f6a6995/cardigan.jpg" for ::1 at 2022-03-20 16:59:11 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cardigan"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started GET "/" for ::1 at 2022-03-20 16:59:13 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:6
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1864)
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhORFpoY2pVMk1EVTVNV2swWW5oNGREWnVjMmt3Y2pkdWFubHJad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNaTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TWk1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4yOTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--d14ad15ced1f5eff180bb809ad10c2ee33d72510/dress2.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibk5qWXpJNWMzWXpiVEpqWVRNMU1UYzRPR1YyWW1KaVpXNTViUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1SeVpYTnpNUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUnlaWE56TVM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f1d806b10c806f32dcd916197faffb02b0a682a4/dress1.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"dress1"}
+Completed 200 OK in 17ms (ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZV1ZxY0RGMGJubG5PSGwxYUdFMmIyaGxkV2xwY2pSdU1XdHphUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUFdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1wbFlXNXpMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmFtVmhibk11YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIyLTAzLTIwVDA2OjA0OjExLjMzMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6fd3b961c6d5e9f75f6282834b57691eab3849cc/jeans.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"dress2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 450)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"jeans"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 383)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjWGRpTW1KM1lYVndkM280Tm1Sek9XTXdaRGM1YXpodWRteHRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OM1pXRjBaWEl1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHpkMlZoZEdWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--b45f49d20794151add2ba78da1f006729d61b128/sweater.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"sweater"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaMjVvZG01NGR6Y3daV1kyYUhsNGFuVTBNVzVoWXpjMU5tOXVaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1OaGNtUnBaMkZ1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMkZ5WkdsbllXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuNTg1WiIsInB1ciI6ImJsb2Jfa2V5In19--56b7fae4547b5851fb3b765147800cd14f6a6995/cardigan.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlamgxYWpodmIySTNiWGh1Y0hkcmNUTTNhVGhoYzNwb2RHUnFjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5OMWFYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkemRXbDBMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVT2hGelpYSjJhV05sWDI1aGJXVTZDbXh2WTJGcyIsImV4cCI6IjIwMjItMDMtMjBUMDY6MDQ6MTEuMzQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ac9eb0e61cf506a4e38da884f61dbe104011ab4c/suit.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPWGRrWjNod2RXVTFOakUzTUdNNFptWmtZM294WVRnM2IyMTROQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5SemFHbHlkQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozUnphR2x5ZEM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--a24973ae8d4f2c24c992470aa4d9e412381f85cf/tshirt.jpg" for ::1 at 2022-03-20 16:59:13 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cardigan"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"suit"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"tshirt"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 712)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 416)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 636)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | Allocations: 25254)
+Completed 200 OK in 81ms (Views: 78.4ms | ActiveRecord: 1.7ms | Allocations: 25753)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhREUyY0c0MGRXY3lkR0Z3TUhac01EZHBOekptY2pWNmVISm9OUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1Kc2IzVnpaUzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoySnNiM1Z6WlM1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMi0wMy0yMFQwNjowNDoxMS4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--e4d4c81d6c4bb6fa8e7f435bfd395b181a360584/blouse.jpg" for ::1 at 2022-03-20 16:59:14 +1100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"blouse"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-03-20 16:59:17 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 2946)
+
+
+Started GET "/" for ::1 at 2022-03-20 16:59:17 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 8223)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 8754)
+
+
