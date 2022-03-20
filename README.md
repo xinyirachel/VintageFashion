@@ -29,7 +29,7 @@ Home page:
 ![Home](/docs/homepage.png)
 
 Listings:
-![Listings](/docs/listing.png)
+![Listings](/docs/listings.png)
 
 Create listing:
 ![Create a list](/docs/createalist.png)
