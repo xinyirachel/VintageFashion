@@ -19,11 +19,22 @@ View the source code and version control repository [here](https://github.com/xi
 
 ## Description of your marketplace app (website)
 
+### Purpose
+
 The 2-way marketplace web application Vintage Fashion has been created as a platform to help buyer and seller do trading directly without the middle man.
 
 The target audience is Australian people who want to sell their old clothese or buying vintage clothese to saving money (There are also people buy vintage for collection).
 
-User can create a list with their product information and edit/delete it. They make change to other people's post. They can enter their contact details and product describtion (information like condition or price can be entered too).
+### Features
+Users can view all listings but if they want to post anything they need to sign in. They can sign up an account to do that.
+
+Users can create a list with their product information and edit/delete it. They make change to other people's post. They can enter their contact details and product describtion (information like condition or price can be entered too). 
+
+### Sitemap
+
+![Home](/docs/sitemap.png)
+
+### Screenshots
 
 Home page:
 
