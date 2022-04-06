@@ -5,9 +5,13 @@ class ListingsController < ApplicationController
   before_action :authorize_user, only: [:edit, :update, :destroy]
   before_action :set_form_vars, only: [:new, :edit]
 
+  # modified index method
+  # GET /listings or /listings.json
   def index
     @listings = Listing.all
   end
+
+  # GET listings/1 or GET listings/1.json
 
   def show
     session = Stripe::Checkout::Session.create(
@@ -22,6 +26,7 @@ class ListingsController < ApplicationController
           quantity: 1
         }
       ],
+      # creating a checkout session and payment intent
       payment_intent_data: {
         metadata: {
           user_id: current_user && current_user.id, 
@@ -36,14 +41,13 @@ class ListingsController < ApplicationController
     
   end
 
-  # def show
-  #   @listing = Listing.find(params[:id])
-  # end
 
+  # GET /listings/new
   def new
     @listing = Listing.new
   end
 
+  # POST /listings or /listings.json
   def create
     @listing = current_user.listings.new(listing_params) #This method interacts with DB to create a new entry of listing
     if @listing.save 
@@ -60,6 +64,8 @@ class ListingsController < ApplicationController
 
   end
 
+  # PATCH/PUT /listings/1 or /listings/1.json
+
   def update
 
     @listing.update(listing_params)
@@ -73,6 +79,8 @@ class ListingsController < ApplicationController
 
   end
 
+  # DELETE /listings/1 or /listings/1.json
+
   def destroy
     @listing.destroy
     redirect_to listings_path, notice: "Deleted!"
@@ -80,7 +88,7 @@ class ListingsController < ApplicationController
   end
 
   private
-
+  # Only allow a list of trusted parameters through.
   def listing_params
     params.require(:listing).permit(:title, :price, :category_id, :condition, :description, :picture)
   end
@@ -94,7 +102,8 @@ class ListingsController < ApplicationController
 
 
 
-
+  
+  # Use callbacks to share common setup or constraints between actions.
   def set_listing
     @listing = Listing.find(params[:id])
 
