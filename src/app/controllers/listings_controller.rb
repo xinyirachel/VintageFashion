@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
   before_action :authorize_user, only: [:edit, :update, :destroy]
   before_action :set_form_vars, only: [:new, :edit]
 
-  # modified index method
+  
   # GET /listings or /listings.json
   def index
     @listings = Listing.all
