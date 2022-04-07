@@ -3,11 +3,25 @@
 
 ## Identification of the problem you are trying to solve by building this particular marketplace app.
 
-This app is a online vintage clothing store. People who don't want to go out to buy vintage clothes or giving their clothes to vintage store can use this app to buy or sell their old clothes.
+Businesses are shutting down due to covid-19. However, online business is booming. Buying online is a shift in consumer behavior, and online business will forward many years in future. The consumers behaviors are likely to be changed permanently. It's important to have an online store for every business.
+
+As the world faces this covid 19 pandemic, clothing stores are studying how the pandemic situation is giving impact to fashion industry. Retailers are shutting down their physical store all over the world, which motivating people to buy clothes online instead because people are forced to stay at home for long time. 
+
+This app can save vintage second-hand clothing business, and move this kind of business online.  The app is a online vintage clothing store. People who don't want to go out to buy vintage clothes or giving their clothes to vintage store can use this app to buy or sell their old clothes. 
 
 ## Why is it a problem that needs solving?
 
-Nowadays, businesses are shutting down due to covid-19. However, online business is booming. This app can save vintage clothing business, and move this kind of business online. 
+There are many online clothing business on the market, however, you can barely fina a online vintage fashion store. The app is not just for one fashion brand, it is for everyone who want to sell or buy old clothes without making physical contact to vintage store collecting old clothes. 
+
+Vintage clothing cost less, prevent pollution and reduce material waste. It's fun to walk in a vintage store to explore your personal style and have fun. Purchasing vintage clothes shouldn't been stoped by pandemic, the market need this app to save this kind of business.ß
+
+
+
+
+
+
+
+
 
 ## A link (URL) to your deployed app
 
@@ -143,7 +157,7 @@ MVC model make the app easy to maintenance and improved the ability for the app 
 Users and categories and listings have id bigint data types, because primary key must be unque and never repeats. Categories has many listings and category id is a foreign key in listings table, another foreign key for listing table is user id. They depend on each other. Databases use active record assosciations to create reationships between the different models. 
 
 ## An ERD for your app
-![erd](/docs/ERD.jpg)
+![erd](/docs/ERD.png)
 
 ## Provide your database schema design
 ![schema1](/docs/s.png)
