@@ -156,4 +156,24 @@ Users and categories and listings have id bigint data types, because primary key
 ![schema2](/docs/s2.png)
 
 ## Describe the way tasks are allocated and tracked in your project
+Trello was used to allocated and tracked tasks. Trello hass Lists and Cards for organise tasks in a flexible way.
+
+The lists for tasks are as follows:
+
+* To do: This list include tasks I will work in future.
+* In progress: This list include tasks I am working on.
+* Bugs: This list include blockers need to be fixed and possible errors need to be fixed or improved 
+* Review: This list include tasks to be test or check or redo many times(like git commit)
+* Done: Completed tasks cards will be moved to this list.
+
+The label for all the cards are as follows:
+*Code: Tasks relating to coding aspects of the app. 
+*Design: Includes ERD and wireframe and UI UX design.
+*Deployment: The taks relating to deployment to Heroku.
+*Git: Tasks relating to version control.
+*Other: Oher task like documentations and etc.
+
+I find it's easier to set lists as working progress and card labels as work type rather than the other way around. Because it's easier to notice how much tasks left for you to manage your time to finish all of them. Workload can be estimated by how long a certain list is. 
+
+View the Trello Board [here](https://trello.com/b/pOuEZyIL/vintage-fashion)
 ![trello](/docs/trello.png)
