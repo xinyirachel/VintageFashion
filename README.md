@@ -167,11 +167,11 @@ The lists for tasks are as follows:
 * Done: Completed tasks cards will be moved to this list.
 
 The label for all the cards are as follows:
-*Code: Tasks relating to coding aspects of the app. 
-*Design: Includes ERD and wireframe and UI UX design.
-*Deployment: The taks relating to deployment to Heroku.
-*Git: Tasks relating to version control.
-*Other: Oher task like documentations and etc.
+* Code: Tasks relating to coding aspects of the app. 
+* Design: Includes ERD and wireframe and UI UX design.
+* Deployment: The taks relating to deployment to Heroku.
+* Git: Tasks relating to version control.
+* Other: Oher task like documentations and etc.
 
 I find it's easier to set lists as working progress and card labels as work type rather than the other way around. Because it's easier to notice how much tasks left for you to manage your time to finish all of them. Workload can be estimated by how long a certain list is. 
 
