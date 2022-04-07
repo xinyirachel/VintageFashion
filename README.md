@@ -26,23 +26,6 @@ The 2-way marketplace web application Vintage Fashion has been created as a plat
 ### Features
 Users can view all listings but if they want to post anything they need to sign in. They can sign up an account to do that. Users can create a list with their product information and edit/delete it. They make change to other people's post. They can enter their contact details and product describtion (information like condition or price can be entered too). 
 
-####Application_controller
-Extented from ActionController
-It is the parent class of listings_controller and pages_controller
-####Listings_controller
-Defined method index, show, new, create, edit, update, destroy and etc. Connect view and model then user can do actions on page like show page.
-####Pages_controller
-This is for method about authentication
-#### ApplicationRecord
-A abstract class which is extended from ActiveRecord class
-It is the parent class of Category class, Listing class and User class
-####Category
-Seed file been populate to database. There are 6 categories for listing items.
-####Listing
- Listing has foreign key from user and category. It has enumarator that defines condition.
-####User
-Device generate most code about authentication
-
 ### Sitemap
 
 ![Sitemap](/docs/sitemap.jpg)
@@ -130,26 +113,37 @@ Acceptance criteria:
 ![showpagenotlogin](/docs/6.png)
 ![showpagenotlogin phone](/docs/7.png)
 
-## An ERD for your app
-![erd](/docs/ERD.jpg)
+
 
 ## Explain the different high-level components (abstractions) in your app
-#### Active record
- Active record used to define Model. It helped with creating, updating and deleting Object records in database.
-#### Active storage
-Active storage helped with file implementing.  Developer can send file attachments a web app be automatically.
-#### Device
-Device is a Gem. This package bing the app a user authentication and authorization system.
+The app developed on Rails based on MVC pattern. MVC divides the work of Vintage Fashion into models, views and controller. Models work behind the scenes at high level, views face to buyer and sellers, and controller is responsoble for accepting input and converting inout to commands for models and views.
+
+Take controller for home.page as an example. Firstly I generate a new controller named pages. Then Ithe app has pages_controller.rb and a folder named pages under view folder. Then in route.rb, I defined root route. 
+![root route](/docs/rootroute.png)
+
+Next this app need methods in controller since controller is about implementation. I defined a method named index. 
+![page controller](/docs/pagecontroller.png)
+
+The app will pass the view, so a template for interactive request will be created, which is under pages folder, and the document is home.html.erb. The app pass this html.erb doc as view to user. The methods in controller can also access to model, it give the view access to the model. Model mantain relationship between database and objects. A class called ActiveRecord is inherited from by each of the app's models.
+![active record](/docs/activerecord.png)
+
+MVC model make the app easy to maintenance and improved the ability for the app to grow. It also provide reusability, like a model can be reused by many views.
+
 
 ## Detail any third party services that your app will use
-In future development. The app may use some thrid party API.
+* Heroku: Heroku is a cloud Platform as a Service. This app is being deployed on Heroku and it is deployeding with Git, which means the app has been pushed on Github and the app on git hub repository is associating with Heroku. Documents in app like the static images are complied, stored and deployed throught Asset Pipeline.
+* Stripe: Stripe is also a gem. Stripe API allows this app to acess the functionality of Stripe. The "buy" button on the page showing a certain product of this app link to the Stripe payment service. Customer can fill out their payment information on that page and the transcation they made will show on the dashboard of a Stripe testing account. 
+* Ultrahook: The app also utilise webhook, a HTTP push API, to let Stripe make http request to app when buyer see a successful check out. Ultrahook is a simple too that connect endpoints. This is a way for stripe to send HTTP request to Vintage Fashion because Stripe can listen for the internal event and when the event happens, Stripe send a HTTP request. This 
 
 ## Describe your projects models in terms of the relationships (active record associations) they have with each other
-In Active Record, item been created has persistent data and action to that data.
-![schema1](/docs/s.png)
+
+
 
 ## Discuss the database relations to be implemented in your application
 Users and categories and listings have id bigint data types, because primary key must be unque and never repeats. Categories has many listings and category id is a foreign key in listings table, another foreign key for listing table is user id. They depend on each other. Databases use active record assosciations to create reationships between the different models. 
+
+## An ERD for your app
+![erd](/docs/ERD.jpg)
 
 ## Provide your database schema design
 ![schema1](/docs/s.png)
