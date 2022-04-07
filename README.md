@@ -61,6 +61,10 @@ Create listing:
 
 ![Create a list](/docs/createalist.png)
 
+Show page:
+
+![Show](/docs/show.png)
+
 ### Target audience
 The target audience is Australian people who want to sell their old clothese or buying vintage clothese to saving money (There are also people buy vintage for collection).
 
@@ -119,9 +123,12 @@ Acceptance criteria:
 ![homepagenotlogin](/docs/3.png)
 ![homepagelogedin](/docs/4.png)
 ![listings](/docs/1.png)
+![listingsphone](/docs/11.png)
 ![create a listings](/docs/2.png)
+![create a listings phone](/docs/22.png)
 ![showpagelogedin](/docs/5.png)
 ![showpagenotlogin](/docs/6.png)
+![showpagenotlogin phone](/docs/7.png)
 
 ## An ERD for your app
 ![erd](/docs/ERD.jpg)
