@@ -43,28 +43,28 @@ ActiveRecord::Schema.define(version: 2022_03_17_113937) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "categories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|   # has many listings
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "listings", force: :cascade do |t|
+  create_table "listings", force: :cascade do |t|    # # belongs to user/ belongs to category
     t.string "title"
     t.integer "condition"
     t.integer "price"
-    t.boolean "sold", default: false
+    t.boolean "sold", default: false  # change to sold if user purchase though stripe
     t.text "description"
-    t.bigint "user_id", null: false
+    t.bigint "user_id", null: false   
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_listings_on_category_id"
-    t.index ["user_id"], name: "index_listings_on_user_id"
+    t.index ["category_id"], name: "index_listings_on_category_id"   # Foreign_key
+    t.index ["user_id"], name: "index_listings_on_user_id"    # Foreign_key
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
+  create_table "users", force: :cascade do |t|   # has many listings
+    t.string "email", default: "", null: false   # login email 
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

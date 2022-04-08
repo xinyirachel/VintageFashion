@@ -1,3 +1,3 @@
-class Category < ApplicationRecord
+modeclass Category < ApplicationRecord
     has_many :listings
 end

@@ -162,13 +162,13 @@ Vintage Fashion has three models for the main functionality.
 ## Discuss the database relations to be implemented in your application
 Users and categories and listings have id bigint data types, because primary key must be unque and never repeats. Categories has many listings and category id is a foreign key in listings table, another foreign key for listing table is user id. They depend on each other. Databases use active record assosciations to create reationships between the different models. 
 
+Refering to the ERD below. Listings table have all clothes, and each listing is about a cloth for user to buy or upload. It associate with users table though a foreign key, because a listing can only be create by one user. Asingle user can craete many listings, so they have a one to many relationship. Categories table is the same. Each one listing has one category, but category can has many listings.
+
 ## An ERD for your app
 ![erd](/docs/ERD.png)
 
 
 ## Provide your database schema design
-
-
 ![schema1](/docs/s.png)
 ![schema2](/docs/s2.png)
 ![schema3](/docs/s3.png)
