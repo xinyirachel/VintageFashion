@@ -27,7 +27,7 @@ View the source code and version control repository [here](https://github.com/xi
 
 ### Purpose
 
-The 2-way marketplace web application Vintage Fashion has been created as a platform to help buyer and seller do trading directly without the middle man.
+The web application Vintage Fashion has been created as a platform to help buyer and seller do second-hand clothes trading online.
 
 ### Features
 * Users can view all listings but if they want to post anything they need to sign in. They can sign up an account to do that. 
