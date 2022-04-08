@@ -68,26 +68,31 @@ The following tech stack were used:
 - JavaScript
 - Ruby
 - Ruby on Rails
-- Heroku
 - PostgreSQL
 - Device 
 - Bootstrap
+- Stripe
+- Ultrahook
+- Heroku
 
 ## User stories for your app
-1. User can sign up an account
+1. As a user, I want to sign up a new account.
+	So that I enter Email, Password, Password confirmation on Sign up page and then click on "Sign up" button
 Accept criteria:
 * Given a user is on SIgn up page
    And the user has entered Email, Password, Password confirmation
    When the user clicks on "Sign up" button
    Then a new user account is created
    
-2. An existing user should be able to login 
+2. As a user, I want to login to my account.
+	So I type in my username and password on Sign in page and then click on "log in" button
 Acceptance criteria:
 *	Given a user typed in correct username and password
 	When the user clicked on "log in" button
 	Then Home page is displayed
 
-3. User should be able to create listing of a clothes
+3. As a user, I want to create a listing.
+	So I provide details of a listing on the "New Clothes for Vintage Fashion" and clicks on "Create Listing" button
 Acceptance criteria:
 *	Given a user is logged in
 	And the user is on the "New Clothes for Vintage Fashion" page
@@ -103,14 +108,18 @@ Acceptance criteria:
 	Then "New item created!" page is displayed
 	And the details of the created clothes is displayed on "New item created!" page
 
-4. User should be able to view listed items
+4. As a user, I want to view listings. So I click "All listings" button on Home page
 Acceptance criteria:
 *	Given a user is on Home page
 	When the user clicked on "All listings" button
 	Then the user should be directed to Listing page
 	And listed clothes should be displayed on Listings page
 
-5. User should be able to edit the clothes the he/she created on Listing page
+5. As a user, I want to edit the clothes I created on Listing page.
+	So I click on "Update" button on Listing page.
+	
+6. As a user, I want to purchase the clothes on Listing page.
+	So I click on "Buy" button on Listing page.
 
 ## Wireframes for your app
 ![homepagenotlogin](/docs/3.png)
