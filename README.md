@@ -13,15 +13,7 @@ This app can save vintage second-hand clothing business, and move this kind of b
 
 There are many online clothing business on the market, however, you can barely fina a online vintage fashion store. The app is not just for one fashion brand, it is for everyone who want to sell or buy old clothes without making physical contact to vintage store collecting old clothes. 
 
-Vintage clothing cost less, prevent pollution and reduce material waste. It's fun to walk in a vintage store to explore your personal style and have fun. Purchasing vintage clothes shouldn't been stoped by pandemic, the market need this app to save this kind of business.ß
-
-
-
-
-
-
-
-
+Vintage clothing cost less, prevent pollution and reduce material waste. It's fun to walk in a vintage store to explore your personal style and have fun. Purchasing vintage clothes shouldn't been stoped by pandemic, the market need this app to save this kind of business.
 
 ## A link (URL) to your deployed app
 
@@ -38,7 +30,11 @@ View the source code and version control repository [here](https://github.com/xi
 The 2-way marketplace web application Vintage Fashion has been created as a platform to help buyer and seller do trading directly without the middle man.
 
 ### Features
-Users can view all listings but if they want to post anything they need to sign in. They can sign up an account to do that. Users can create a list with their product information and edit/delete it. They make change to other people's post. They can enter their contact details and product describtion (information like condition or price can be entered too). 
+* Users can view all listings but if they want to post anything they need to sign in. They can sign up an account to do that. 
+
+* Users can create a list with their product information and edit/delete it. They cannot make changes to other people's post. 
+
+* The app also has payment system, user can click "buy" button to go to payment information page, then enter their card information. They can see the "payment sucessful" page if they made a sucessful payment.
 
 ### Sitemap
 
@@ -63,7 +59,7 @@ Show page:
 ![Show](/docs/show.png)
 
 ### Target audience
-The target audience is Australian people who want to sell their old clothese or buying vintage clothese to saving money (There are also people buy vintage for collection).
+The target audience is people who want to sell their old clothese or buying vintage clothese to saving money (There are also people buy vintage for collection).
 
 ### Tech stack
 The following tech stack were used:
@@ -128,7 +124,6 @@ Acceptance criteria:
 ![showpagenotlogin phone](/docs/7.png)
 
 
-
 ## Explain the different high-level components (abstractions) in your app
 The app developed on Rails based on MVC pattern. MVC divides the work of Vintage Fashion into models, views and controller. Models work behind the scenes at high level, views face to buyer and sellers, and controller is responsoble for accepting input and converting inout to commands for models and views.
 
@@ -139,9 +134,9 @@ Next this app need methods in controller since controller is about implementatio
 ![page controller](/docs/pagecontroller.png)
 
 The app will pass the view, so a template for interactive request will be created, which is under pages folder, and the document is home.html.erb. The app pass this html.erb doc as view to user. The methods in controller can also access to model, it give the view access to the model. Model mantain relationship between database and objects. A class called ActiveRecord is inherited from by each of the app's models.
-![active record](/docs/activerecord.png)
 
-MVC model make the app easy to maintenance and improved the ability for the app to grow. It also provide reusability, like a model can be reused by many views.
+
+MVC model make the app easy to maintenance and improved the ability for the app to grow. It also provide reusability, like a model can be reused by many views. Rails implement though a class inheritant Active Record class. Active Record class allow this app to have data saves in database and have methods need to operate that data. Ruby code can be used to inteact with model. Active reocrd will translate that into valid SQL statements. For example, a model, a column in databse called listing with atributes like title, condition and etc. This is a subclass of ActiveRecord class.
 
 
 ## Detail any third party services that your app will use
@@ -151,7 +146,18 @@ MVC model make the app easy to maintenance and improved the ability for the app 
 
 ## Describe your projects models in terms of the relationships (active record associations) they have with each other
 
+Vintage Fashion has three models for the main functionality. 
 
+1. Listing model is an important model for this app, because listing model is the source of interaction between  user model and category model. This model also associate with pictures. The association are: listing belongs to user, listing belongs to category.
+
+2. Category model has one-to-many relationship with listing model. The association for the category model is that category has many listings. 
+
+3. Device model, a gem, created the user model. Little change made to this model. The association for the user model is that user has many listings. 
+
+
+![model1](/docs/model1.png)
+![model2](/docs/model2.png)
+![model3](/docs/model3.png)
 
 ## Discuss the database relations to be implemented in your application
 Users and categories and listings have id bigint data types, because primary key must be unque and never repeats. Categories has many listings and category id is a foreign key in listings table, another foreign key for listing table is user id. They depend on each other. Databases use active record assosciations to create reationships between the different models. 
@@ -159,9 +165,13 @@ Users and categories and listings have id bigint data types, because primary key
 ## An ERD for your app
 ![erd](/docs/ERD.png)
 
+
 ## Provide your database schema design
+
+
 ![schema1](/docs/s.png)
 ![schema2](/docs/s2.png)
+![schema3](/docs/s3.png)
 
 ## Describe the way tasks are allocated and tracked in your project
 Trello was used to allocated and tracked tasks. Trello hass Lists and Cards for organise tasks in a flexible way.
