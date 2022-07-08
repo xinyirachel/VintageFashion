@@ -116,17 +116,6 @@ Acceptance criteria:
 6. As a user, I want to purchase the clothes on Listing page.
 	So I click on "Buy" button on Listing page.
 
-## Wireframes for your app
-![homepagenotlogin](/docs/3.png)
-![homepagelogedin](/docs/4.png)
-![listings](/docs/1.png)
-![listingsphone](/docs/11.png)
-![create a listings](/docs/2.png)
-![create a listings phone](/docs/22.png)
-![showpagelogedin](/docs/5.png)
-![showpagenotlogin](/docs/6.png)
-![showpagenotlogin phone](/docs/7.png)
-
 ## Detail any third party services that your app will use
 * Heroku: Heroku is a cloud Platform as a Service. This app is being deployed on Heroku and it is deployeding with Git, which means the app has been pushed on Github and the app on git hub repository is associating with Heroku. Documents in app like the static images are complied, stored and deployed throught Asset Pipeline.
 * Stripe: Stripe is also a gem. Stripe API allows this app to acess the functionality of Stripe. The "buy" button on the page showing a certain product of this app link to the Stripe payment service. Customer can fill out their payment information on that page and the transcation they made will show on the dashboard of a Stripe testing account. 
