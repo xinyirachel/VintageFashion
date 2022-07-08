@@ -48,7 +48,7 @@ The following tech stack were used:
 - Ultrahook
 - Heroku
 
-## User stories for your app
+## User stories
 1. As a user, I want to sign up a new account.
 	So that I enter Email, Password, Password confirmation on Sign up page and then click on "Sign up" button
 Accept criteria:
@@ -94,7 +94,7 @@ Acceptance criteria:
 6. As a user, I want to purchase the clothes on Listing page.
 	So I click on "Buy" button on Listing page.
 
-## Detail any third party services that your app will use
+## Detail any third party services
 * Heroku: Heroku is a cloud Platform as a Service. This app is being deployed on Heroku and it is deployeding with Git, which means the app has been pushed on Github and the app on git hub repository is associating with Heroku. Documents in app like the static images are complied, stored and deployed throught Asset Pipeline.
 * Stripe: Stripe is also a gem. Stripe API allows this app to acess the functionality of Stripe. The "buy" button on the page showing a certain product of this app link to the Stripe payment service. Customer can fill out their payment information on that page and the transcation they made will show on the dashboard of a Stripe testing account. 
 * Ultrahook: The app also utilise webhook, a HTTP push API, to let Stripe make http request to app when buyer see a successful check out. Ultrahook is a simple too that connect endpoints. This is a way for stripe to send HTTP request to Vintage Fashion because Stripe can listen for the internal event and when the event happens, Stripe send a HTTP request. This 
