@@ -31,28 +31,6 @@ The web application Vintage Fashion has been created as a platform to help buyer
 
 * The app also has payment system, user can click "buy" button to go to payment information page, then enter their card information. They can see the "payment sucessful" page if they made a sucessful payment.
 
-### Sitemap
-
-![Sitemap](/docs/sitemap.jpg)
-
-### Screenshots
-
-Home page:
-
-![Home](/docs/homepage.png)
-
-Listings:
-
-![Listings](/docs/listings.png)
-
-Create listing:
-
-![Create a list](/docs/createalist.png)
-
-Show page:
-
-![Show](/docs/show.png)
-
 ### Target audience
 The target audience is people who want to sell their old clothese or buying vintage clothese to saving money (There are also people buy vintage for collection).
 
