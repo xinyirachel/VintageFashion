@@ -20,7 +20,7 @@ View the source code and version control repository [here](https://github.com/xi
 
 * The app also has payment system, user can click "buy" button to go to payment information page, then enter their card information. They can see the "payment sucessful" page if they made a sucessful payment.
 
-##Tech stack
+## Tech stack
 The following tech stack were used:
 - HTML
 - CSS/SCSS
