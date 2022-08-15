@@ -3,12 +3,7 @@
 
 ## About Vintage Fashion
 
-Businesses are shutting down due to covid-19. However, online business is booming. Buying online is a shift in consumer behavior, and online business will forward many years in future. The consumers behaviors are likely to be changed permanently. It's important to have an online store for every business.
-
-As the world faces this covid 19 pandemic, clothing stores are studying how the pandemic situation is giving impact to fashion industry. Retailers are shutting down their physical store all over the world, which motivating people to buy clothes online instead because people are forced to stay at home for long time. 
-
-This app can save vintage second-hand clothing business, and move this kind of business online.  The app is a online vintage clothing store. People who don't want to go out to buy vintage clothes or giving their clothes to vintage store can use this app to buy or sell their old clothes. 
-
+A prototype shopping website on which users can log in, upload, buy and sell second-hand clothes. The app was created in Ruby on Rails with a PostgreSQL database and deployed using Heroku. It demonstrates CRUD implementation, Stripe payment integration and user authentication with permissions.
 
 ## A link (URL) to your deployed app
 
@@ -30,9 +25,6 @@ The web application Vintage Fashion has been created as a platform to help buyer
 * Users can create a list with their product information and edit/delete it. They cannot make changes to other people's post. 
 
 * The app also has payment system, user can click "buy" button to go to payment information page, then enter their card information. They can see the "payment sucessful" page if they made a sucessful payment.
-
-### Target audience
-The target audience is people who want to sell their old clothese or buying vintage clothese to saving money (There are also people buy vintage for collection).
 
 ### Tech stack
 The following tech stack were used:
@@ -95,6 +87,6 @@ Acceptance criteria:
 	So I click on "Buy" button on Listing page.
 
 ## Detail any third party services
-* Heroku: Heroku is a cloud Platform as a Service. This app is being deployed on Heroku and it is deployeding with Git, which means the app has been pushed on Github and the app on git hub repository is associating with Heroku. Documents in app like the static images are complied, stored and deployed throught Asset Pipeline.
-* Stripe: Stripe is also a gem. Stripe API allows this app to acess the functionality of Stripe. The "buy" button on the page showing a certain product of this app link to the Stripe payment service. Customer can fill out their payment information on that page and the transcation they made will show on the dashboard of a Stripe testing account. 
-* Ultrahook: The app also utilise webhook, a HTTP push API, to let Stripe make http request to app when buyer see a successful check out. Ultrahook is a simple too that connect endpoints. This is a way for stripe to send HTTP request to Vintage Fashion because Stripe can listen for the internal event and when the event happens, Stripe send a HTTP request. This 
+* Heroku: This app is being deployed on Heroku. Documents in app like the static images are complied, stored and deployed throught Asset Pipeline.
+* Stripe: Stripe API allows this app to acess the functionality of Stripe. The "buy" button on the page showing a certain product of this app link to the Stripe payment service. Customer can fill out their payment information on that page and the transcation they made will show on the dashboard of a Stripe testing account. 
+* Ultrahook: This app utilises webhook, a HTTP push API, to let Stripe make http request to app when buyer see a successful check out. Ultrahook is a simple too that connect endpoints. This is a way for stripe to send HTTP request to Vintage Fashion because stripe can listen for the internal event. When the internal event happens, Stripe will send a HTTP request.
