@@ -5,28 +5,22 @@
 
 A prototype shopping website on which users can log in, upload, buy and sell second-hand clothes. The app was created in Ruby on Rails with a PostgreSQL database and deployed using Heroku. It demonstrates CRUD implementation, Stripe payment integration and user authentication with permissions.
 
-## A link (URL) to your deployed app
+### A link (URL) to your deployed app
 
 View the website [here](https://vintage-fashion.herokuapp.com/).
 
-## A link to your GitHub repository
+### A link to your GitHub repository
 
 View the source code and version control repository [here](https://github.com/xinyirachel/VintageFashion).
 
-## Description of your marketplace app (website)
-
-### Purpose
-
-The web application Vintage Fashion has been created as a platform to help buyer and seller do second-hand clothes trading online.
-
-### Features
+## Features
 * Users can view all listings but if they want to post anything they need to sign in. They can sign up an account to do that. 
 
 * Users can create a list with their product information and edit/delete it. They cannot make changes to other people's post. 
 
 * The app also has payment system, user can click "buy" button to go to payment information page, then enter their card information. They can see the "payment sucessful" page if they made a sucessful payment.
 
-### Tech stack
+##Tech stack
 The following tech stack were used:
 - HTML
 - CSS/SCSS
