@@ -1,7 +1,6 @@
 
 # Vintage Fashion
 
-**I am still polishing this project and I am working on fixing a Stripe error. You won't see any stripe relate content at the moment.**
 
 <img src="./ReadmeDoc/home.png">
 
@@ -21,7 +20,7 @@ View the source code:[here](https://github.com/xinyirachel/VintageFashion)
 
 ## About Vintage Fashion
 
-A prototype non-profit website on which users can log in, upload, buy, exchange and sell their old clothes. The app was created in Ruby on Rails with a PostgreSQL database and deployed using Heroku. It demonstrates CRUD implementation, AWS S3 image storage, Stripe payment integration and user authentication with permissions.
+A prototype non-profit website on which users can log in, upload, buy, exchange and sell their old clothes. The app was created in Ruby on Rails with a PostgreSQL database and deployed using Heroku. It demonstrates CRUD implementation, AWS S3 image storage and user authentication with permissions.
 
 ## How to run the app locally
 To run Vintage Fashion locally you need to:
@@ -73,7 +72,5 @@ The following tech stack were used:
 - Device 
 - Bootstrap
 - AWS S3
-- Stripe
-- Ultrahook
 - Heroku
 
