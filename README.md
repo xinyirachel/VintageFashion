@@ -59,8 +59,6 @@ You'll need to create your own credentials file to configure your own S3 storage
 
 * Users can create a list with their product information and edit/delete it. They cannot make changes to other people's post. 
 
-* The app also has donation to developer system, user can click the button to go to payment information page, then enter their card information. They can see the "payment sucessful" page if they made a sucessful payment.(Coming soon)
-
 ## Tech stack
 The following tech stack were used:
 - HTML
