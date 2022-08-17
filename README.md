@@ -11,6 +11,10 @@
 
 The live demo of  the website is:[here](https://vintage-fashion2.herokuapp.com/)
 
+Login Details of testing account:
+Email: test@test.com
+Password: 123456
+
 ## A link to your GitHub repository
 
 View the source code:[here](https://github.com/xinyirachel/VintageFashion)
@@ -31,7 +35,7 @@ Please note that:
 - You have Postgres installed in your local environment.
 - The application makes use of `Bootstrap version 4`
 
-### Rails Setup
+Rails Setup:
 To get the `Rails` server up and running you'll need to run the following in your CLI:
 
 ```
