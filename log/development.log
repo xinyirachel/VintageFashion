@@ -20331,3 +20331,59 @@ Completed 200 OK in 45ms (Views: 29.6ms | ActiveRecord: 14.4ms | Allocations: 15
 [ActiveJob] [ActiveStorage::PurgeJob] [81ebe089-d33f-4f2f-993a-7b018b2b9e40] [36m  S3 Storage (185.8ms) [0m[31mDeleted file from key: s7clc09iwib2ca73apwcikpua7qm[0m
 [ActiveJob] [ActiveStorage::PurgeJob] [81ebe089-d33f-4f2f-993a-7b018b2b9e40] [36m  S3 Storage (39.8ms) [0m[31mDeleted files by key prefix: variants/s7clc09iwib2ca73apwcikpua7qm/[0m
 [ActiveJob] [ActiveStorage::PurgeJob] [81ebe089-d33f-4f2f-993a-7b018b2b9e40] Performed ActiveStorage::PurgeJob (Job ID: 81ebe089-d33f-4f2f-993a-7b018b2b9e40) from Async(default) in 401.18ms
+Started GET "/" for ::1 at 2022-08-17 19:55:30 +1000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 80.8ms | Allocations: 10468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 508)
+  Rendered layout layouts/application.html.erb (Duration: 130.8ms | Allocations: 19936)
+Completed 200 OK in 143ms (Views: 134.8ms | ActiveRecord: 0.0ms | Allocations: 23587)
+
+
+Started GET "/" for ::1 at 2022-08-17 19:58:00 +1000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 753)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 8898)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 9470)
+
+
+Started GET "/listings" for ::1 at 2022-08-17 19:58:21 +1000
+Processing by ListingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (86.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (43.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:8
+  Rendered listings/index.html.erb within layouts/application (Duration: 221.0ms | Allocations: 14161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 231.1ms | Allocations: 22356)
+Completed 200 OK in 247ms (Views: 55.5ms | ActiveRecord: 178.9ms | Allocations: 26122)
+
+
+Started GET "/listings/2" for ::1 at 2022-08-17 19:58:28 +1000
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:71:in `set_listing'
+  [1m[36mCACHE Listing Load (0.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (9.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/show.html.erb:26
+  Rendered listings/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 10860)
+Completed 200 OK in 30ms (Views: 15.6ms | ActiveRecord: 10.1ms | Allocations: 12907)
+
+
