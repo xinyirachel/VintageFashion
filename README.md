@@ -6,9 +6,6 @@
 
 <img src="./ReadmeDoc/listings.png">
 
-## A link (URL) to your deployed app
-
-The live demo of  the website is:[here](https://vintage-fashion2.herokuapp.com/)
 
 Login Details of testing account:
 Email: test@test.com
